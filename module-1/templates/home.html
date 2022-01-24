@@ -1,0 +1,82 @@
+{% extends 'header.html'%}
+{% block content %}
+    <!--<div class="inner-banner-w3ls">
+    </div>-->
+
+    <section class="wthree-row w3-gallery py-5">
+		<div class="container py-xl-5">
+			<div class="w3l_header mb-sm-5 pb-3">
+                <h3 class="text-center">Resume Analysis</h3>
+			</div>
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <form action="/FBLinkuploader" method="post">
+                    <br><br>
+                        <div class="form-group">
+                            <label>Enter Facebook link</label>
+                            <input type="text" class="form-control" placeholder="Enter User's facebook link" name="fblink">
+                        </div>
+                        <div class="right-w3l">
+                            <button type="submit" style="width:300px" class="btn btn-primary">Fetch data from Facebook</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+			
+			<div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <form action="/LinkedinLinkuploader" method="post">
+                    <br><br>
+                        <div class="form-group">
+                            <label>Enter Linked in link</label>
+                            <input type="text" class="form-control" placeholder="Enter User's linkedin link" name="link">
+                        </div>
+                        <div class="right-w3l">
+                            <button type="submit" style="width:300px" class="btn btn-primary">Fetch data from linkedin</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <form action="/uploader" method="post" enctype="multipart/form-data">
+                    <br><br>
+                        <div class="form-group">
+                            <label>Choose resume</label>
+                            <input type="file" class="form-control" name = "file">
+                        </div>
+                        <div class="right-w3l">
+                            <button type="submit" style="width:300px" class="btn btn-warning">Upload Resume</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+			
+			<div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <form action="/clickvideoemotion" method="post">
+                    <br><br>
+                        <div class="right-w3l">
+                            <button type="submit" style="width:300px" class="btn btn-primary">Video emotion </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+			
+			<div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <form action="/startspeechemotion" method="post">
+                    <br><br>
+                        <div class="right-w3l">
+                            <button type="submit" style="width:300px" class="btn btn-primary">Speech emotion </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+			
+        </div>
+        <!-- //gallery container -->
+    </section>
+
+{% endblock %}

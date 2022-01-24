@@ -1,0 +1,39 @@
+{% extends 'header.html'%}
+{% block content %}
+    <!--<div class="inner-banner-w3ls">
+    </div>-->
+
+    <section class="wthree-row w3-gallery py-5">
+		<div class="container py-xl-5">
+			<div class="w3l_header mb-sm-5 pb-3">
+                <h3 class="text-center">Speech emotion</h3>
+                <br>
+                <br>
+                
+                {% if data is defined %}
+                    <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            
+                            <th>Emotion Found </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {% for i in data%}
+                        <tr>
+                           
+                            <td>{{i}}</td>
+                        </tr>    
+                    {%endfor%}  
+                    </tbody>
+                    </table>
+                {% else %}
+                    <h4>No emotion detected</h4>                                  
+                {% endif %}
+                
+			</div>
+        </div>
+
+    </section>
+
+{% endblock %}

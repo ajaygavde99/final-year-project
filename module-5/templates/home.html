@@ -1,0 +1,31 @@
+{% extends 'header.html'%}
+{% block content %}
+<!-- banner -->
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		
+		</div>
+		<div align="center">
+		<form action="/captureuserfaceandsavebyname" method="POST" >
+	
+		
+					
+					Enter following details
+					<h3>username:- </h3><br> <input type='text' name='username' /><br><br><br>
+					<h3>Company name:-  </h3><br> <input type='text' name='company_name' /><br><br><br>
+					<h3>working Start-date:-  </h3><br> <input type='text' name='start_date' /><br><br><br>
+					<h3>Working End-Date:- </h3><br>  <input type='text' name='End_date' /><br><br><br>
+					<h3>Technologies worked:- </h3><br>  <input type='text' name='technlogy_worked' /><br><br><br>
+					<input type="submit" value="Start survillience camera for registration">
+		</form>
+		<form action="/trainthemodels"  method="POST"><input type="submit" value="Start training"></form>	
+	<!--<form action="/recognitionofperson" > -->
+		<form action="/attendance" >
+		
+		<input type="submit" value="Start recognition">
+		</form>			
+			</div>	
+		<!-- The Modal -->
+
+	<!--//banner -->
+	{% endblock %}

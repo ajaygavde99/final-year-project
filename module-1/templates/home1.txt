@@ -1,0 +1,167 @@
+{% extends 'header.html'%}
+{% block content %}
+    <div class="inner-banner-w3ls">
+    </div>
+
+    <section class="wthree-row w3-gallery py-5">
+		<div class="container py-xl-5">
+			<div class="w3l_header text-center mb-sm-5 pb-3">
+				<h3>Fill the form</h3>
+			</div>
+
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <form action="/formdata" method="post">
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Age</label>
+                            <div class="col-sm-10">
+                              <input type="number" class="form-control" name="age" id="inputEmail3" placeholder="Age">
+							  
+							  
+							 
+							  
+							  
+                            </div>
+							
+                        </div>
+						
+						 <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Age category</label>
+                          
+                            
+                                <div class="col-sm-10">
+							  
+							  
+							  <select class="form-control" name="agecateg" required>
+                                    <option selected>Choose age</option>
+                                    <option value="1,0,0">Young</option>
+                                    <option value="0,1,0">Adult</option>
+                                    <option value="0,0,1">Senior</option>
+                                </select>
+							  
+							  </div>
+                            </div>
+                        
+
+                        <fieldset class="form-group">
+                            <div class="row">
+                                <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+                                <div class="col-sm-10">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender" value="0">
+                                        <label class="form-check-label">
+                                            MALE
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="gender" value="1">
+                                        <label class="form-check-label">
+                                            FEMALE
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Job</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" name="job" required>
+                                    <option selected>Choose job</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Housing</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" name="housing" required>
+                                    <option selected>Choose Housing</option>
+                                   
+                                    <option value="1,0">own</option>
+                                    <option value="0,1">rent</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Savings</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" name="savings" required>
+                                    <option selected>Choose Saving</option>
+                                   
+                                    <option value="1,0,0,0">moderate</option>
+									<option value="0,1,0,0">no_inf</option>
+									<option value="0,0,1,0">quite rich</option>
+									 
+                                    <option value="0,0,0,1">rich</option>
+                                    
+                                    <option value="NA">NA</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Checking Acc</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" name="checking_acc" required>
+                                    <option selected>Choose Checking account</option>
+									<option value="1,0,0">moderate</option>
+                                    <option value="0,1,0">no_inf</option>
+                                    
+                                    <option value="0,0,1">rich</option>
+                                    
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Credit Amount</label>
+                            <div class="col-sm-10">
+                              <input type="number" class="form-control" name="credit_amount" min="1" placeholder="Credit Amount" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Duration</label>
+                            <div class="col-sm-10">
+                              <input type="number" class="form-control" name="duration" min="1" placeholder="Duration" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Purpose</label>
+                            <div class="col-sm-10">
+                                <select class="form-control" name="purpose" required>
+                                    <option selected>Choose...</option>
+                                  
+                                    <option value="1,0,0,0,0,0,0">car</option>
+                                    <option value="0,1,0,0,0,0,0">domestic appliances</option>
+                                    <option value="0,0,1,0,0,0,0">Education</option>
+                                    <option value="0,0,0,1,0,0,0">Furniture Equipment</option>
+                                    <option value="0,0,0,0,1,0,0">Radio TV</option>
+                                    <option value="0,0,0,0,0,1,0">Repairs</option>
+                                    <option value="0,0,0,0,0,0,1">Others</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        
+
+
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                              <button type="submit" class="btn btn-primary">SUBMIT</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- //gallery container -->
+    </section>
+
+{% endblock %}

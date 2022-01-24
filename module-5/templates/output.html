@@ -1,0 +1,40 @@
+{% extends 'header.html'%}
+{% block content %}
+<!-- banner -->
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		
+		</div>
+		<div class="table-responsive">
+				<h3>Companies in which this person woked</h3>
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>id</th>
+							<th>username</th>
+							<th>company_name</th>
+							<th>start_date</th>
+							<th>End_date</th>
+							<th>technology_worked</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for item in data %}
+							<tr>
+								<td>{{item[0]}}</td>
+								<td>{{item[1]}}</td>
+								<td>{{item[2]}}</td>
+								<td>{{item[3]}}</td>
+								<td>{{item[4]}}</td>
+								<td>{{item[5]}}</td>
+							</tr>
+							{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</div>		
+				
+		<!-- The Modal -->
+	</div>
+	<!--//banner -->
+	{% endblock %}

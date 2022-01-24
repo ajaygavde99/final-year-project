@@ -1,0 +1,74 @@
+{% extends 'header.html'%}
+{% block content %}
+    <section class="banner-bottom-w3layouts bg-li py-5" id="services">
+		<div align="right">Welcome {{user}} &emsp;&emsp;&emsp;</div>
+		<form>
+  <input type="button" value="Go back!" onclick="history.back()">
+</form>
+		<div class="container py-xl-5 py-lg-3">
+			<div align="center">
+			<h4> your location is </h4>{{userlocation}}
+			<h3 class="tittle text-center font-weight-bold">News</h3>
+				{% if loc == 'pune'%}
+					<div class="col-lg-4 about-in text-center my-lg-0 my-3">
+						<div class="card active">
+						
+							<a href="/citynews?location=pune""><button type="button" class="btn btn-primary">&nbsp;Pune&nbsp;&nbsp;</button></a>
+						</div>
+					</div>
+
+					<div class="col-lg-4 about-in text-center my-lg-0 my-3">
+						<div class="card active">
+						
+							<a href="/citynews?location="><button type="button" class="btn btn-success">&nbsp;Mumbai &nbsp;</button></a>
+						</div>
+					</div>
+
+					<div class="col-lg-4 about-in text-center my-lg-0 my-3">
+						<div class="card active">
+							<a href="/citynews?location="><button type="button" class="btn btn-warning">&nbsp;Delhi &nbsp;&nbsp;</button></a>
+						</div>
+					</div>
+				{% endif %}
+				{% if loc == 'mumbai'%}
+					<div class="col-lg-4 about-in text-center my-lg-0 my-3">
+						<div class="card active">
+							<a href="/citynews?location=mumbai"><button type="button" class="btn btn-success">&nbsp;Mumbai &nbsp;</button></a>
+						</div>
+					</div>
+
+					<div class="col-lg-4 about-in text-center my-lg-0 my-3">
+						<div class="card active">
+							<a href="/citynews?location=pune"><button type="button" class="btn btn-primary">&nbsp;Pune&nbsp;&nbsp;</button></a>
+						</div>
+					</div>
+
+					<div class="col-lg-4 about-in text-center my-lg-0 my-3">
+						<div class="card active">
+							<a href="/citynews?location=delhi"><button type="button" class="btn btn-warning">&nbsp;Delhi &nbsp;&nbsp;</button></a>
+						</div>
+					</div>
+				{% endif %}
+				{% if loc == 'delhi'%}
+					<div class="col-lg-4 about-in text-center my-lg-0 my-3">
+						<div class="card active">
+							<a href="/citynews?location=delhi"><button type="button" class="btn btn-warning">&nbsp;Delhi &nbsp;&nbsp;</button></a>
+						</div>
+					</div>
+
+					<div class="col-lg-4 about-in text-center my-lg-0 my-3">
+						<div class="card active">
+							<a href="/citynews?location=mumbai"><button type="button" class="btn btn-success">&nbsp;Mumbai &nbsp;</button></a>
+						</div>
+					</div>
+
+					<div class="col-lg-4 about-in text-center my-lg-0 my-3">
+						<div class="card active">
+							<a href="/citynews?location=pune"><button type="button" class="btn btn-primary">&nbsp;Pune&nbsp;&nbsp;</button></a>
+						</div>
+					</div>
+				{% endif %}
+			</div>
+		</div>
+	</section>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'header.html'%}
+{% block content %}
+<!-- middle -->
+	<section class="midd-w3 py-5" id="faq">
+		<div class="container py-xl-5 py-lg-3">
+			<div class="row">
+				<div class="col-lg-6 about-right-faq">
+                {% for k in s  %}
+					{% if k == 'ht'%}
+                         <a href="/news?view={{k}}" class="btn button-style button-style-2 mt-sm-5 mt-4">Hindustan Times</a><br>
+
+					{% elif k == 'ie' %}
+
+                        <a href="/news?view={{k}}" class="btn button-style button-style-2 mt-sm-5 mt-4">Indian Express</a><br>
+					{% else %}
+
+                        <a href="/news?view={{k}}" class="btn button-style button-style-2 mt-sm-5 mt-4">Times of india</a>
+					{% endif %}
+				{% endfor %}
+
+				</div>
+				<div class="col-lg-6 left-wthree-img text-right">
+					<img src="{{url_for('static', filename='images/b1.png')}}" alt="" class="img-fluid mt-5" />
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
